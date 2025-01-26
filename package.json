@@ -1,0 +1,27 @@
+{
+  "name": "castway",
+  "version": "1.0.0",
+  "description": "Castway web-site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch db.json",
+    "start": "npx parcel project/src/Index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KlykovEvgeniy/Castway.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KlykovEvgeniy/Castway/issues"
+  },
+  "homepage": "https://github.com/KlykovEvgeniy/Castway#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
