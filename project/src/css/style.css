@@ -20,6 +20,7 @@
     --nonepropery--:none;
     --activebtn--: rgb(202, 72, 72);
     --onclick--:red;
+    --hovercolor--: rgb(69, 145, 185);
 }
 
 html,
@@ -42,63 +43,37 @@ body{
     padding: 30px;
 }
 
+.btn-up {
+    position: fixed;
+    background-color: var(--blueclr--);
+    right: 20px;
+    bottom: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+  }
 
+  .btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  }
 
-/* Hamburger Menu */
-
-/* Hamburger Menu Settings  */
-
-body.apper-hamburger .hamburger-menu{
-    opacity: 1;
-    visibility: visible;
-    display: block;
-    margin-top: 300px;
-    margin-bottom: 1000px;
-}
-
-body.apper-hamburger html body{
-    overflow: hidden;
-}
-
-body.apper-hamburger .logo-link{
+  .btn-up_hide {
     display: none;
+  }
+
+.header{
+    margin-bottom: 50px;
 }
-
-body.apper-hamburger .dropdown-button{
-    position: absolute;
-    right: 0;
-}
-
-body.apper-hamburger .nav{
-    flex-direction:column;
-    position: relative;
-}
-
-
-/* End Hamburger Menu Settigns  */
-
-
-.dropdown-button{
-    opacity: 0;
-    visibility: hidden;
-    background:transparent;
-    border:none;
-    display: none;
-}
-
-.hamburger-menu{
-    display: none;
-}
-
-.hamburger-item{
-    margin-bottom: 20px;
-}
-
-
-
-/* Start */
-
-
 
 .nav {
     display: flex;
@@ -192,47 +167,109 @@ body.apper-hamburger .nav{
 }
 
 
-/* Addaptive */
+.news-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.news-title {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 79.2px;
+    letter-spacing: 2.880000114440918px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    overflow: hidden;
+}
+.button {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background-color: var(--blueclr--);
+    padding: 15px 30px;
+    border:none;
+    border-radius: 5px;
+    transition: .2s ease;
+    margin: 20px;
 
-
-@media screen and (max-width: 1300px){
-    .container{
-        max-width: 1000px;
-    }
-    .header-title{
-        opacity: 0;
-        visibility: hidden;
-        display: none;
+    &:active{
+        background-color: var(--activebtn--);
     }
 
-    .header-bottom{
-        display: flex;
-        flex-direction: column-reverse;
+    &:hover{
+        background-color:var(--hovercolor--);
     }
-    .header-bottom-img{
-        width: 500px;
-    }
+}
 
+.episode-article {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blackclr--);
+    padding: 50px;
+    border-radius: 50px;
+    align-items: center;
+    margin: 50px 0 0 0 ;
+}
+.news-article-img {
+    width: 35%;
+}
+.article-rigth-part {
+    padding: 50px;
+    height: max-content;
+}
+.article-mini-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background-color: rgba(128, 128, 128, 0.219);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.article-title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--blueclr--);
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.article-main-title {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 70.4px;
+    letter-spacing: 2.559999942779541px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    max-width: 701px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+.article-lower-text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--whiteclrdark--);
+    max-width: 757px;
+    margin-bottom: 20px;
+}
+.article-button {
+    margin: 0;
 }
 
 
-@media screen and (max-width: 850px){
-
-    .dropdown-button{
-        opacity: 1;
-        visibility: visible;
-        display: block;
-    }
-
-
-    /* Hamburger Menu */
-
-
-    .nav-list{
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-    }
-
-    /* Hamburger Menu End  */
-}
